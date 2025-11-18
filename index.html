@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GY7701 GIS MCQ Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+    <header class="app-header">
+        <h1>Fundamentals of GIS – MCQ Trainer</h1>
+        <p class="subtitle">Based on lectures & practicals (Calvin Jephcote, GY4471 / GY7701)</p>
+    </header>
+
+    <main class="app-main">
+        <section class="question-card">
+            <div class="question-meta">
+                <span id="question-topic" class="badge"></span>
+                <span id="progress" class="progress"></span>
+            </div>
+
+            <div id="question-text" class="question-text">
+                <!-- Question text injected by JS -->
+            </div>
+
+            <div id="options-container" class="options-container">
+                <!-- Option buttons injected by JS -->
+            </div>
+
+            <div id="feedback" class="feedback hidden">
+                <div id="feedback-text"></div>
+                <div id="explanation" class="explanation"></div>
+            </div>
+
+            <div class="controls">
+                <button id="check-btn" class="btn primary">Check answer (Enter)</button>
+                <button id="next-btn" class="btn secondary" disabled>Next question (Enter)</button>
+            </div>
+        </section>
+
+        <aside class="stats-card">
+            <h2>Performance</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-label">Total answered</div>
+                    <div id="total-answered" class="stat-value">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Total correct</div>
+                    <div id="total-correct" class="stat-value">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Accuracy (all)</div>
+                    <div id="accuracy-overall" class="stat-value">0%</div>
+                </div>
+            </div>
+
+            <h3>Rolling accuracy</h3>
+            <div class="stats-grid small">
+                <div class="stat">
+                    <div class="stat-label">Last 10</div>
+                    <div id="acc-10" class="stat-value">–</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Last 20</div>
+                    <div id="acc-20" class="stat-value">–</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Last 50</div>
+                    <div id="acc-50" class="stat-value">–</div>
+                </div>
+            </div>
+
+            <div class="hint">
+                <p>
+                    First Enter = check answer.  
+                    Second Enter = move to next question.
+                </p>
+                <p>
+                    You can expand the question bank in <code>script.js</code>
+                    – look for the <code>questions</code> array.
+                </p>
+            </div>
+        </aside>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
